@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #ED2EA5,
+        #FAD009
+    );
+}
+#grid-container{
+    border: 2px solid white;
+    width: 70%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-box{
+    border: 1px solid black;
+}
