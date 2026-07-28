@@ -25,15 +25,15 @@ sizeBtn.addEventListener("click", () => {
 
 function createGrid(size){
     container.innerHTML = "";
-    const containerSize = container.offsetWidth;
-    container.style.height = `${containerSize}px`;
-
+    const containerSize = container.offsetWidth || 500;
     const boxSize = Math.floor(containerSize / size);
+
+    container.style.width = `${boxSize * size}px`;
+    container.style.height = `${boxSize * size}px`;
 
     for(let i=1; i<=size; i++){
         for(let j=1; j<=size; j++){
             const gridBox = document.createElement("div");
-            
             gridBox.classList.add("grid-box");
             gridBox.style.width = `${boxSize}px`;
             gridBox.style.height = `${boxSize}px`;

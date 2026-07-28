@@ -24,12 +24,13 @@ body{
 }
 #grid-container{
     width: 55vmin;
+    height: 55vmin;
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
 }
 .grid-box{
-    border: 1px solid black;
+    box-shadow: inset 0 0 0 1px black;
     background-color: white;
 }
 #size-btn{
