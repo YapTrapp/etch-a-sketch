@@ -13,17 +13,24 @@ body{
         #FAD009
     );
 }
+#game-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 16px;
+}
 #grid-container{
     border: 2px solid white;
-    width: 70%;
+    width: 70vmin;
     aspect-ratio: 1/1;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
     display: flex;
     flex-wrap: wrap;
 }
 .grid-box{
     border: 1px solid black;
+}
+#size-btn{
+    
 }
