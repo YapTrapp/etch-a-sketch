@@ -22,7 +22,6 @@ body{
     gap: 16px;
 }
 #grid-container{
-    border: 2px solid white;
     width: 70vmin;
     aspect-ratio: 1/1;
     display: flex;
@@ -32,5 +31,25 @@ body{
     border: 1px solid black;
 }
 #size-btn{
-    
+    background: transparent;
+    border: 4px solid #FF00FF;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 8px #FF00FF, 0 0 16px #FF00FF;
+    transition: all 0.2s ease;
+}
+#size-btn:hover{
+    background: #FF00FF;
+    color: #0d0221;
+    box-shadow: 0 0 12px #FF00FF, 0 0 24px #FF00FF, 0 0 36px #FF00FF;
+}
+.color-btn{
+    padding: 24px;
+    margin-bottom: 8px;
+    border-radius: 5px;
 }

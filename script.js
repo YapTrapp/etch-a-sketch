@@ -1,5 +1,13 @@
 const container = document.getElementById("grid-container");
 const sizeBtn = document.getElementById("size-btn");
+const colorBtns = document.querySelectorAll(".color-btn");
+let currentColor = "#000000";
+
+colorBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        currentColor = btn.style.backgroundColor;
+    });
+});
 
 sizeBtn.addEventListener("click", () => {
     let size = Number(prompt("Enter grid size (e.g. 16 for 16x16):"));
@@ -23,6 +31,9 @@ function createGrid(size){
             gridBox.style.width = `${boxSize}%`;
             gridBox.style.height = `${boxSize}%`;
             container.appendChild(gridBox);
+            gridBox.addEventListener("mouseenter", () => {
+                gridBox.style.backgroundColor = currentColor;
+            });
         }
     }
 }
