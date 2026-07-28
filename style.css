@@ -24,8 +24,6 @@ body{
 }
 #grid-container{
     width: 55vmin;
-    height: 55vmin;
-    background-color: black;
     display: flex;
     flex-wrap: wrap;
 }
