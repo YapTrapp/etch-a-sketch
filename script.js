@@ -25,15 +25,18 @@ sizeBtn.addEventListener("click", () => {
 
 function createGrid(size){
     container.innerHTML = "";
-    const boxSize = 100 / size;
+    const containerSize = container.offsetWidth;
+    container.style.height = `${containerSize}px`;
+
+    const boxSize = Math.floor(containerSize / size);
 
     for(let i=1; i<=size; i++){
         for(let j=1; j<=size; j++){
             const gridBox = document.createElement("div");
             
             gridBox.classList.add("grid-box");
-            gridBox.style.width = `${boxSize}%`;
-            gridBox.style.height = `${boxSize}%`;
+            gridBox.style.width = `${boxSize}px`;
+            gridBox.style.height = `${boxSize}px`;
             container.appendChild(gridBox);
             gridBox.addEventListener("mouseenter", () => {
                 if(isMouseDown){

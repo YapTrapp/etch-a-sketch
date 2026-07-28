@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(
         135deg,
         #ED2EA5,
@@ -16,16 +16,17 @@ body{
 #game-area{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 40px;
     gap: 16px;
 }
 #grid-container{
-    width: 70vmin;
-    aspect-ratio: 1/1;
+    width: 55vmin;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 .grid-box{
     border: 1px solid black;
