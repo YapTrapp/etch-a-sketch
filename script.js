@@ -2,6 +2,10 @@ const container = document.getElementById("grid-container");
 const sizeBtn = document.getElementById("size-btn");
 const colorBtns = document.querySelectorAll(".color-btn");
 let currentColor = "#000000";
+let isMouseDown = false;
+
+window.addEventListener("mousedown", () => isMouseDown = true);
+window.addEventListener("mouseup", () => isMouseDown = false);
 
 colorBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -32,7 +36,9 @@ function createGrid(size){
             gridBox.style.height = `${boxSize}%`;
             container.appendChild(gridBox);
             gridBox.addEventListener("mouseenter", () => {
-                gridBox.style.backgroundColor = currentColor;
+                if(isMouseDown){
+                    gridBox.style.backgroundColor = currentColor;
+                }
             });
         }
     }
