@@ -38,6 +38,9 @@ function createGrid(size){
             gridBox.style.width = `${boxSize}px`;
             gridBox.style.height = `${boxSize}px`;
             container.appendChild(gridBox);
+            gridBox.addEventListener("mousedown", () => {
+                gridBox.style.backgroundColor = currentColor;
+            })
             gridBox.addEventListener("mouseenter", () => {
                 if(isMouseDown){
                     gridBox.style.backgroundColor = currentColor;
