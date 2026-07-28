@@ -29,6 +29,7 @@ body{
 }
 .grid-box{
     border: 1px solid black;
+    background-color: white;
 }
 #size-btn{
     background: transparent;
@@ -52,4 +53,6 @@ body{
     padding: 24px;
     margin-bottom: 8px;
     border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
 }
